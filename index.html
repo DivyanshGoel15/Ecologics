@@ -105,6 +105,7 @@
         .ecologics-text {
             font-weight: bold;
             font-size: 3rem;
+            /* Increased size for prominence */
             text-transform: uppercase;
             margin-top: 20px;
             color: #388e3c;
@@ -119,32 +120,32 @@
         <h1>Modular Sustainable Eco Homes</h1>
     </header>
     <div class="container">
+        <!-- Ensure "ECOLOGICS" is displayed prominently -->
         <div class="ecologics-text">ECOLOGICS</div>
-        <p>Welcome to the future of sustainable living. Discover our range of modular eco homes designed to be environmentally friendly and energy efficient.</p>
+        <p>Welcome to the future of sustainable living. Discover our range of modular eco homes designed to be
+            environmentally friendly and energy efficient.</p>
     </div>
     <div class="popup" id="popup">
         <div class="popup-content">
             <h2>Are you a Buyer or a Seller?</h2>
-            <button onclick="handleChoice('buyer')">Buyer</button>
-            <button onclick="handleChoice('seller')">Seller</button>
+            <button onclick="redirectToPage('buyer')">Buyer</button>
+            <button onclick="redirectToPage('seller')">Seller</button>
         </div>
     </div>
 
     <script>
-        function handleChoice(choice) {
+        function redirectToPage(choice) {
             if (choice === 'buyer') {
-                window.location.href = 'buyer.html'; // Redirect to buyer page
+                window.location.href = 'buyer.html';
             } else if (choice === 'seller') {
-                window.location.href = 'seller.html'; // Redirect to seller page
+                window.location.href = 'seller.html';
             }
         }
 
-        // Show the popup on page load
         window.onload = function () {
             document.getElementById('popup').style.display = 'flex';
         };
 
-        // Close the popup when clicking outside the content
         document.getElementById('popup').addEventListener('click', function (event) {
             if (event.target === document.getElementById('popup')) {
                 document.getElementById('popup').style.display = 'none';
@@ -152,7 +153,11 @@
         });
     </script>
 
-    <!-- Rest of the content -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -162,6 +167,26 @@
             <div class="col-md-6">
                 <img src="eco2.webp" alt="Eco Home 2" class="img-fluid mb-4">
                 <p>Experience the comfort and efficiency of our modular homes, tailored to your needs.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="eco4.webp" alt="Eco Home 3" class="img-fluid mb-4">
+                <p>Our homes are equipped with the latest green technologies to ensure energy efficiency.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="eco3.jpg" alt="Eco Home 4" class="img-fluid mb-4">
+                <p>Join the movement towards sustainable living with our eco-friendly modular homes.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="eco6.avif" alt="Eco Home 3" class="img-fluid mb-4">
+                <p>Our homes are equipped with the latest green technologies to ensure energy efficiency.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="eco5.jpg" alt="Eco Home 4" class="img-fluid mb-4">
+                <p>Join the movement towards sustainable living with our eco-friendly modular homes.</p>
             </div>
         </div>
     </div>
@@ -192,4 +217,3 @@
 </body>
 
 </html>
-
